@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Station Schedule</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-6">Train Station Schedule</h1>
+    <p class="lead">A schedule for trains</p>
+  </div>
+</div>
+<div class="container">
+<table class="table">
+  <thead id="tableHead">
+    <tr>
+      <th>Train Name</th>
+      <th>Destination</th>
+      <th>Frequency</th>
+      <th>Next Arrival</th>
+      <th>Minutes Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="trainName"></td>
+      <td id="trainDestination"></td>
+      <td id="trainFrequency"></td>
+      <td id="trainNextArrival"></td>
+      <td id="trainMinutes"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class='container'>
+<form>
+  <div class="form-group">
+    <label>Train Name</label>
+    <input type="text" class="form-control" id="name">
+
+  </div>
+  <div class="form-group">
+    <label>Destination</label>
+    <input type="text" class="form-control" id="destination" >
+  </div>
+    <div class="form-group">
+    <label>First Train Time (HH: mm - Military time)</label>
+    <input type="text" class="form-control" id="firstTrain">
+
+  </div>
+  <div class="form-group">
+    <label>Frequency (Minutes)</label>
+    <input type="text" class="form-control" id="frequency">
+  </div>
+  
+  <button id = "submit" type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+
+
+
+	
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+
+<script src="javascript/app.js"></script>
+</body>
+</html>
