@@ -1,0 +1,14 @@
+.container {
+	margin: auto;
+	text-align: center;
+}
+
+body   {       
+    background-image: url('/images/train.jpg');        
+    background-repeat: no-repeat;        
+    position: relative;        
+    width: 85%;            
+    height: 610px;       
+    margin-left: auto;      
+    margin-right: auto;       
+} 

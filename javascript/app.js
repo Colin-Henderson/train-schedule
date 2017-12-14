@@ -3,7 +3,7 @@
     authDomain: "train-activity-2801a.firebaseapp.com",
     databaseURL: "https://train-activity-2801a.firebaseio.com",
     projectId: "train-activity-2801a",
-    storageBucket: "",
+    storageBucket: "train-activity-2801a.appspot.com",
     messagingSenderId: "979896400155"
   };
   firebase.initializeApp(config);
@@ -12,7 +12,7 @@
 
 
 
-$('#submit').on("click", function() {
+$('#submit').on("click", function(event) {
 	event.preventDefault();
 
 	$('#trainName').append('<tr><td>'+ $('#name').val() + '</td></tr>');
@@ -27,7 +27,7 @@ $('#submit').on("click", function() {
 	var name = $('#name').val();
 	var destination = $('#destination').val();
 	var frequency = $('#frequency').val();
-	var arrival = $('#arrival').val();
+	var arrival = moment($('#arrival').val(), "HH:mm").format("X");
 	var minutes = $('#minutes').val();
 
 	 database.ref().push(
@@ -60,6 +60,8 @@ database.ref().on("child_added", function(snapshot){
  	function (errorObject) {
   	console.log("The read failed: " + errorObject.code);
 	}),
+
+
 
 
 
